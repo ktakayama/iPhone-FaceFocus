@@ -31,7 +31,6 @@ CGImageRef UIGetScreenImage();
 
 - (void) faceDetectPool {
    @synchronized(self) {
-      NSLog(@"faceDetectPool");
       NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
       // Load XML
@@ -50,7 +49,6 @@ CGImageRef UIGetScreenImage();
 }
 
 - (void) faceDetect {
-   NSLog(@"detect");
    IplImage *image = [self createIplImage:UIGetScreenImage()];
 
    // Scaling down
